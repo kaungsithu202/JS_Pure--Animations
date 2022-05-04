@@ -42,12 +42,6 @@ btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
   section1.scrollIntoView({ behavior: 'smooth' });
 });
-const h1 = document.querySelector('h1');
-const alertH1 = function (e) {
-  alert('addEventListener : Great! You are reading the heading !!');
-};
-h1.addEventListener('mouseenter', alertH1);
-setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 //page navigation
 
@@ -62,9 +56,6 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     });
   }
 });
-
-h1.firstElementChild.style.color = 'red';
-h1.lastElementChild.style.color = 'blue';
 
 tabsContainer.addEventListener('click', e => {
   const clicked = e.target.closest('.operations__tab');
